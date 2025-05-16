@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作表单元素</title>
+</head>
+<body>
+    <!-- 表单很多情况，也要修改属性，比如点击眼睛，可以看到密码，本质是吧表单转换为文本框
+    正常的有属性有有取值的，跟其他的标签属性没有任何区别
+    获取:DOM对象.属性名
+    设置:DOM对象.属性名 = 新值 -->
+    <input type="password" value="电脑">
+    <input type="checkbox" name="" id="">
+    <script>
+        const input1 = document.querySelector(`input:nth-child(${1})`)
+        const input2 = document.querySelector(`input:nth-child(${2})`)
+        input1.type = "text"
+        input2.checked = true
+        // button的disabled属性是按钮是否禁用
+    </script>
+</body>
+</html>

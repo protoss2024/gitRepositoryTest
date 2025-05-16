@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax介绍</title>
+</head>
+<body>
+    <!-- Ajax:
+    概念:Asynchronous JavaScript And XML,异步的JavaScript和XML。
+    作用:
+        数据交换:通过Ajax可以给服务器发送请求,并获取服务器响应的数据。
+        异步交互:可以再不重新加载整个页面的情况下，与服务器交换数据并更新部分网页的技术，如：搜索联想、用户名是否可用的校验等等。
+
+    同步和异步
+        同步:服务器处理逻辑客户端要等待，处理完毕才能继续下一步操作。
+        异步:服务器处理逻辑客户端不需要等待，处理过程中可以进行其他操作，无需等待服务器响应 -->
+    <input type="button" value="获取数据" onclick="getData()">
+    <div id="div1"></div>
+</body>
+<script>
+    // 原生代码
+    function getData(){
+        // 1.创建XMLHttpRequest
+        var xmlHttpRequest = new XMLHttpRequest();
+
+        // 2.发送异步请求
+        xmlHttpRequest.open('GET','https://yapi.smart-xwork.cn/mock/169327/emp/list');
+        xmlHttpRequest.send();//发送请求
+
+        // 3.获取服务器响应数据
+        xmlHttpRequest.onreadystatechange = function(){
+            if(xmlHttpRequest.readyState == 4 && xmlHttpRequest == 200){
+                document.getElementById('div').innerHTML = responseText;
+            }
+        }
+    }
+    // 可以直接参考w3c的手册
+</script>
+</html>

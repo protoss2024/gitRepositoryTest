@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行高</title>
+    <style>
+        /* 行高有三部分组成，有文本高度，上间距和下间距三个部分组成行高 */
+        .height {
+            /* 该属性属性值可以写两种，一个是数字+px，一个是数字，纯数字大小即为当前标签font-size属性值的倍数 */
+            line-height: 10;
+        }
+        .height1 {
+            line-height: 30px;
+        }
+        /* 使用行高垂直居中效果 */
+        div {
+            height: 100px;
+            background-color: blue;
+            /* 垂直居中技巧：行高属性值等于盒子高度属性值 */
+            /* 注意不能换行 */
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p>123123123</p>
+    <p class="height">
+        asdasaaaaaasdfd
+    </p>
+    <p class="height1">
+        asdasaaaaaasdfd
+    </p>
+    <p>njnn</p>
+    <div>di<br>v</div>
+</body>
+</html>

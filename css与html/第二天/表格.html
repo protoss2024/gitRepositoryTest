@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格</title>
+</head>
+<body>
+    <!-- 表格标签table嵌套tr，tr嵌套td和th -->
+    <!-- 表格格子大小会被内容撑开 -->
+    <!-- table标签为表格，tr标签为行，th标签为表头单元格，td标签为内容单元格 -->
+    <!-- th默认效果为加粗和居中 -->
+    <!-- table默认没有边框线，使用border属性才能看见边框线 -->
+    <!-- border值为边框线像素大小 -->
+    <table border="10">
+        <tr>
+            <th>姓名</th>
+            <th>语文</th>
+            <th>数学</th>
+            <th>总分</th>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>99</td>
+            <td>100</td>
+            <td>199</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>98</td>
+            <td>100</td>
+            <td>198</td>
+        </tr>
+        <tr>
+            <td>总结</td>
+            <td>全市第一</td>
+            <td>全市第一</td>
+            <td>全市第一</td>
+        </tr>
+    </table>
+    <!-- 表格结构标签吧内容划分为区域，让表格结构更清晰，语义更清晰(对浏览器说的，我们浏览器刷新后肉眼看不到) -->
+    <!-- 表格结构标签主要有三个，thead，tbody，tfoot -->
+    <!-- thead表格头部内容，tbody为表格主体们主要内容区域，tfoot为表格底部汇总信息区域 -->
+    <!-- 表格结果标签写在table标签里面，包裹所要标识的内容 -->
+    <hr>
+    <table border="10">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>语文</th>
+                <th>数学</th>
+                <th>总分</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>张三</td>
+                <td>99</td>
+                <td>100</td>
+                <td>199</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>98</td>
+                <td>100</td>
+                <td>198</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>总结</td>
+                <td>全市第一</td>
+                <td>全市第一</td>
+                <td>全市第一</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

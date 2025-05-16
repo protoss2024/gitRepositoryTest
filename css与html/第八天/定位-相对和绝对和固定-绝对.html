@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位-相对和绝对和固定-绝对</title>
+    <!-- 绝对定位
+    position:absolute
+    使用场景:子级绝对定位，父级相对定位（子绝父相）
+    注意，相对定位后续要加边偏移属性，要一起用 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 400px;
+        }
+
+        .news {
+            /* 父相 */
+            position: relative;
+
+            margin: 100px auto;
+            width: 400px;
+            height: 350px;
+            background-color: #f8f8f8;
+        }
+
+        /* 
+            绝对定位特点：
+                1.脱标不占位
+                2.参照物：先找最近的已经定位的祖先元素（父级，爷级等都是），如果祖先元素都没定位则根据浏览器窗口改位置
+                3.显示模式特点改变：宽高生效（简单粗暴的可以认为有行内块的特点）
+         */
+        .news span {
+            /* 子绝 */
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            /* display: block; */
+            width: 92px;
+            height: 32px;
+            background-color: rgba(0,0,0,0.6);
+            text-align: center;
+            line-height: 32px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="news">
+        <img src="./images/news.jpg" alt="">
+        <span>展会活动</span>
+        <h4>2222世界移动大会</h4>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本修饰属性-缩进和对齐和修饰线</title>
+    <style>
+        /* 文本缩进为text-indent，属性值为数字+px或者数字+em（推荐1em=当前标签的字号大小） */
+        /* 工作中常用的是em单位，因为是缩进两个字符 */
+        /* text-align是水平对齐方式，值常用的有三种，left，center，right，分别为左对齐（默认），居中对齐，右对齐 */
+        /* 最常用的一般是center */
+        p {
+            text-indent: 2em;
+        }
+        h1 {
+            /* 这种属性方式是字体在中间而不是h1标签居中 */
+            text-align: center;
+        }
+        /* 如果要图片和文字一起居中也是用text-align，属性要设置给内容内容的父级 */
+        div {
+            text-align: center;
+        }
+        /* 修饰线属性名为text-decoration */
+        /* 可以加下划线，删除线，上划线 */
+        /* 但凡需要跳转的一般需要a标签，鼠标放在上面会有下划线，没有放置的时候没有下划线，让超链接没有下划线加一个text-decoration */
+        /* 鼠标放置在上面有下划线也是text-decoration */
+        /* 有四个主要属性值，none，underline,line-through,overline,分别是没有线，下划线，删除线，上划线 */
+        .a1 {
+            text-decoration: none;
+        }
+        .a2 {
+            text-decoration: underline;
+        }
+        .a3 {
+            text-decoration: line-through;
+        }
+        .a4 {
+            text-decoration: overline;
+        }
+    </style>
+</head>
+<body>
+    <h1>这是h1标签</h1>
+    <p>这是一个p标签</p>
+    <div>
+        <img src="../素材/images/1.jpg" alt="">
+    </div>
+    <div>开会</div>
+    <a href="" class="a1">一</a>
+    <a href="" class="a2">二</a>
+    <a href="" class="a3">三</a>
+    <a href="" class="a4">四</a>
+</body>
+</html>

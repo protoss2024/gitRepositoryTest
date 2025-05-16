@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>环境对象this和回调函数</title>
+</head>
+<body>
+    <!-- 环境对象：
+    环境对象:指的是函数内部特殊的变量this，他代表着当前函数运行时所处的环境
+    作用:弄清楚this的指向，可以让我们代码更简洁
+    普通函数this指向的是window
+    this指向的其实是函数的调用者想在addeventlistener中的函数指向的是元素
+    函数的调用方式不同，this只带对象也不同
+    谁调用this是谁，时判断this指向的粗略规则，箭头函数没有this
+    直接调用函数其实是window.函数，所以this指向window -->
+
+    回调函数
+    如果将函数A作为参数传递给B时，我们将函数称为回调函数
+    常见使用场景:
+    function fn(){
+        console.log('我是回调函数')
+    }
+    setInterval(fn,1000)
+    fn函数传给了定时器函数，则fn函数为回调函数
+</body>
+</html>

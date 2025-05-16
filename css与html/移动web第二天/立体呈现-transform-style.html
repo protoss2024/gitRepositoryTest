@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=】, initial-scale=1.0">
+    <title>立体呈现</title>
+    <!-- 作用：设置元素的子元素是位于3d空间中还是平面中
+    属性名:transform-style
+    属性值:
+        flat:子级处于平面中
+        preserve-3d:子级处于3d空间 -->
+    <!-- 呈现立体图像步骤
+        1.父元素添加transform-style:preserve-3d;
+        2.子级定位
+        3.调整子盒子的位置（位移或旋转） -->
+    <style>
+        .cuba {
+            /* 第二步定位 */
+            position: relative;
+
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            /* background-color: pink; */
+            transition: all 2s;
+
+            /* 第一步 */
+            transform-style: preserve-3d;
+
+            /* 便于观察 */
+            /* transform: rotateY(89deg); */
+        }
+
+        .cuba div {
+            /* 第二步定位 */
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            width: 200px;
+            height: 200px;
+        }
+
+        .front {
+            background-color: orange;
+            transform: translate3d(0,0,100px);
+        }
+
+        .back {
+            background-color: green;
+            transform: translate3d(0,0,-100px);
+        }
+
+        .cuba:hover {
+            transform: rotateY(90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="cuba">
+        <div class="front">前面</div>
+        <div class="back">后面</div>
+    </div>
+</body>
+</html>

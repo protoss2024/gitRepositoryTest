@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景属性-拆分写法</title>
+    <!-- 背景属性七个常用的背景属性 -->
+    <!-- 描述               属性
+    背景色             background-color
+    背景图             background-image
+    背景图平铺方式      background-repeat
+    背景图位置          background-position
+    背景图缩放          background-size
+    背景图固定          background-attachment
+    背景复合属性        background -->
+    <style>
+        div {
+            /* 限定宽高范围 */
+            width: 400px;
+            height: 300px;
+            
+            /* 背景图：网页中，使用背景图实现装饰性的图片效果 */
+            /* 写法：属性名：background-image(Emmet写法：bgi)
+            属性值：url（背景图URL） */
+            /* 浏览器默认效果一个图片填不满会复制图片覆盖空白处直至铺满 */
+            /* 因为是背景图，所有背景在背后字在上面 */
+            background-image: url(./images/1.png);
+
+            /* 背景图平铺效果：属性名：background-repeat（Emment写法bgr） */
+            /* 属性值           效果
+            no-repeat       不平铺
+            repeat          平铺
+            repeat-x        水平方向平铺
+            repeat-y        垂直方向平铺 */
+            /* 第一行给背景填色方便观察效果 */
+            /* background-color: blueviolet; */
+            /* no-repeat只显示一张不复制，且默认在左上角 */
+            /* background-repeat: no-repeat; */
+            /* 默认效果，填充整个盒子 */
+            /* background-repeat: repeat; */
+            /* 横向不够，横向复制填满垂直方向不管 */
+            /* background-repeat: repeat-x; */
+            /* 与上一个相反 */
+            /* background-repeat: repeat-y; */
+
+            /* 背景图位置：属性名background-position（Emment写法bgp）
+            属性值：水平方向位置  垂直方向位置 */
+            /* 属性值有两个值，第一个值为水平第二个值为垂直 */
+            /* 属性值可以是英文关键字，也可以是数字+px，正负都可以 */
+            /* 关键字      位置
+            left       左侧 
+            right      右侧
+            center     居中
+            top        顶部
+            bottom      底部 */
+            background-repeat: no-repeat;
+            background-color: blue;
+            /* 左上角 */
+            /* background-position: 0 0; */
+            /* 左上角 */
+            /* background-position: left top; */
+            /* 右下角 */
+            /* background-position: right bottom; */
+            /* 向右 */
+            /* background-position: 50px 0px; */
+            /* 向左 */
+            /* background-position: -50px 0px; */
+            /* 向下 */
+            /* background-position: 0px 100px; */
+            /* 向上 */
+            /* background-position: 0px -100px; */
+            /* 混用也生效 */
+            /* background-position: 50px center; */
+            /* 特殊写法！！！！！！！！！！！！！！ */
+            /* 特殊写法即关键字取值写法，可以颠倒顺序，可以只写一个关键字，另一个默认为居中；数字只写一个值表示水平方向，垂直方向为居中 */
+            /* 颠倒顺序写法，依旧生效，在右下角 */
+            /* background-position: bottom right; */
+            /* bottom设置的是垂直方向的居中，因此在底部中间 */
+            /* background-position: bottom; */
+            /* 水平移动50像素，但是垂直没设置默认为居中 */
+            /* background-position: 50px; */
+
+            /* 背景图缩放作用：设置背景图大小，属性名：background-size（Emment写法为bgz）常用属性值有关键字，百分比（根据盒子尺寸计算图片大小）和数字和单位（例如：px，这种写法比较少用） */
+            /* 一般工作时盒子比例与图片比例一致 */
+            /* 关键字主要有两个：cover：等比例缩放背景图片以完整覆盖整个背景区，可能背景图片部分看不见爱你。contain：等比例缩放背景图片以完整装入背景区，可能背景区部分空白 */
+            /* 简而言之cover往大了缩放，contain往小了缩放 */
+            /* 缩放有一个方向填满了就停止缩放 */
+            /* background-size: contain; */
+            /* 缩放两个方向都填满了才停止缩放 */
+            /* background-size: cover; */
+            /* 效果与cover一致，但是100%表示图片的宽度与盒子宽度一致，图片的高度等比例缩放 */
+            /* 注意当图片不在左上角时，缩放是从当前位置缩放，比如向右移动了50px，那么100%，左边会空出50px */
+            /* background-size: 100%; */
+
+            /* 背景图固定：背景不会随着元素的内容滚动属性名：background-attachment（Emment写法bga）属性值：fixed */
+            /* 像是背景一张图，背景上方的内容滚动的时候有这个属性图片就会固定 */
+            /* background-attachment: fixed; */
+        }
+    </style>
+</head>
+<body>
+    <div>这是一个div盒子</div>
+</body>
+</html>

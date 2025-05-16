@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H5自定义属性</title>
+</head>
+<body>
+    <!-- 自定义属性
+    标准属性:标签天生自带的属性 比如class id title等,可以直接使用点语法操作比如:disabled、check、selected
+    自定义属性:
+        在html5中，推出来专门的data-自定义属性
+        在标签上一律以data-开头
+        在DOM对象上一律以dataset对象方式获取 -->
+    <div data-id="1">1</div>
+    <div data-id="2">2</div>
+    <div data-id="3">3</div>
+    <div data-id="4">4</div>
+    <div data-id="5">5</div>
+    <script>
+        const one = document.querySelector('div')
+        // one.dataset可以得到自定义的data对象
+        alert(one.dataset.id)
+    </script>
+</body>
+</html>

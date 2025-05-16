@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平移实现居中效果</title>
+    <!-- 方法1：
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin-left:-100px;
+        margin-top:-50px;
+
+        width:200px;
+        height:100px
+    方法2:百分比参照盒子自身尺寸计算结果
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%) -->
+    <style>
+        .box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            /* 向左向上移动自身尺寸的一半 */
+            transform: translate(-50%,-50%);
+
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

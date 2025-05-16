@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器</title>
+    <style>
+        /* 特点:选择同名标签设置相同样式，也意味着无法差异化同名标签的样式 */
+        p {
+            color: red;
+        }
+        .blueP {
+            color: blue;
+        }
+        .size {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 常见的四种基础选择器为标签选择器，类选择器，id选择器，通配符选择器四种 -->
+    <!-- 标签选择器：使用标签名作为选择器->选中同名标签设置相同的样式。例如p，h1，h2，h3，div，a，img等 -->
+    <p>这是第一个p标签</p>
+    <p>这是第二个p标签</p>
+    <p>这是第三个p标签</p>
+    <!-- 类选择器，作用为查找标签，差异化设置标签的显示效果。 -->
+    <!-- 步骤：定义类选择器->.类名
+    使用类选择器 ->标签添加class=“类名” -->
+    <div>这是div标签</div>
+    <div class="blueP">这是div标签</div>
+    <!-- 多个类选择器一起使用需要加空格在中间 -->
+    <div class="blueP size">这是div标签</div>
+</body>
+</html>

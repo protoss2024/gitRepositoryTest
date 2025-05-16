@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行内元素-内外边距问题</title>
+    <!-- 场景：行内元素添加margin和padding，无法改变元素垂直位置
+    解决方案：给行内元素添加line-height可以改变垂直距离 -->
+    <style>
+        span {
+            margin: 50px;
+            padding: 20px;
+
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <span>span标签1</span>
+    <span>span标签2</span>
+</body>
+</html>

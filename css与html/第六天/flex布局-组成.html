@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局-组成</title>
+    <!-- 设置方式：给父元素设置display:flex，子元素可以自动挤压或拉伸 -->
+    <!-- 组成部分：
+    父元素：弹性容器
+    子元素：弹性盒子
+    主轴：默认在水平方向
+    侧轴/交叉轴：默认在垂直方向 -->
+    <style>
+        .box {
+            /* 设置flex */
+            display: flex;
+
+
+            height: 300px;
+            border: 1px solid #000;
+        }
+
+        .box div {
+            width: 200px;
+
+            /* 注释掉展现拉伸效果 */
+            /* height: 100px; */
+
+
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+
+        <!-- 以下展示挤压子级的效果 -->
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

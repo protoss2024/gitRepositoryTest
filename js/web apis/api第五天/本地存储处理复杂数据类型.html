@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本地存储处理复杂数据类型</title>
+</head>
+<body>
+    本地只能存储字符串，无法存储复杂数据类型
+    这样不可以
+    const obj = {
+        name:'小米10'
+        price:1999
+    }
+    localStorage.setItem('obj',obj)
+    解决方案:需要将复杂数据类型转换成json字符串，在本地存储
+    语法:JSON.stringify(复杂数据类型)
+    localStorage.setItem('obj',JSON.stringify(obj))
+
+    把json字符串转换为对象
+    json.parse(json字符串)
+</body>
+</html>

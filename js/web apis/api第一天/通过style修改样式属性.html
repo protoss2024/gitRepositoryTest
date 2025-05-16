@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通过style修改样式属性</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 可以通过js设置/修改标签元素的样式属性
+    比如通过轮播图小圆点自动更换颜色样式
+    点击按钮可以滚动图片，这是移动图片的位置left等等
+    路径:
+        通过style操作css
+        操作className操作css
+        通过classList操作类控制CSS
+    一、通过style属性操作css
+    语法:
+        对象.style.样式属性 = 值 -->
+    <div class="box"></div>
+    <script>
+        const div = document.querySelector('.box')
+        // 多组单词使用 小驼峰命名法
+        div.style.backgroundColor = 'red'
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>克隆节点和删除节点</title>
+</head>
+<body>
+    <!-- 特殊情况下，我们新增节点，按照如下操作:
+        复制一个原有的节点
+        把复制的节点放入到指定的元素内部 -->
+
+    <!-- 克隆节点:
+        元素.cloneNode(布尔值)
+    cloneNode会克隆出一个跟原标签一样的元素,括号内传入布尔值
+        若为true,则代表克隆时会包含后代节点一起克隆
+        若为false,则代表克隆是不包含后代节点
+        默认为false -->
+    
+    <!-- 删除节点:
+        若一个节点在页面中已不需要时,可以删除它
+        在js的原生DOM操作中，要删除元素必须通过父元素删除
+        语法:
+            父元素.removeChild(要删除的元素)
+        注:
+            如不存在父子关系则删除不成功
+            删除节点和隐藏节点(display:none)有区别:隐藏节点还是存在的，但是删除节点是从html中删除节点 -->
+</body>
+</html>

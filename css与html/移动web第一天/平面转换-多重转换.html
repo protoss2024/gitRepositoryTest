@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平面转换-多重转换</title>
+    <!-- 多重转换技巧:先平移再旋转（transform:transla（） route（）；） -->
+    <style>
+        .box {
+            width: 800px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+
+        img {
+            width: 200px;
+            transition: all 5s;
+        }
+
+        /* 鼠标移入box，图片边走边转 */
+        .box:hover img {
+            /* 先平移在旋转 */
+            transform: translateX(300%) rotate(360deg);
+            /* 先旋转再平移（两种效果完全不同） */
+            /* 多重转换：以上一种转换形态的坐标轴为准 */
+            /* 旋转会改变坐标轴向 */
+            /* transform: rotate(360deg) translateX(300%); */
+
+            /* 想要多重转换只能复合属性不能拆开来写，因为属性有层叠行，前者会被后者覆盖 */
+            /* transform: translate(600px);
+            transform: rotate(360deg); */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./images/tyre1.png" alt="">
+    </div>
+</body>
+</html>

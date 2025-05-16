@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空间转换平移</title>
+    <!-- 空间:是从坐标轴定义的X,Y和Z三条坐标轴构成了一个立体空间，Z轴位置与视线方向相同 -->
+    <!-- 空间转换也叫3D转换 -->
+    <!-- 属性：transform
+    属性：
+        transform:translate3d(x,y,z);
+        transform:translateX();
+        transform:translateY(x,y,z);
+        transform:translateZ(x,y,z); -->
+    <!-- 取值（正负均可）
+        像素单位数值
+        百分比（参照盒子自身尺寸计算结果） -->
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            transition: all 0.5s;
+        }
+
+        .box:hover {
+            /* 默认状态下看不到z轴平移效果 */
+            /* transform: translate3d(100px,200px,300px); */
+            /* 缺少值属性设置不生效 */
+            /* transform: translate3d(100px,200px); */
+
+            /* 以下三个发生层叠后者覆盖前者而不是叠加生效 */
+            transform: translateX(100px);
+            transform: translateY(-100%);
+            transform: translateZ(300px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

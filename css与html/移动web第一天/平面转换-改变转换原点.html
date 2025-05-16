@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平面转换-改变转换原点</title>
+    <!-- 默认情况下，转换原点是盒子中心点
+    属性值:transform-origin:水平圆点位置 垂直原点位置；
+    取值：
+        方位名词（left、top、right、bottom、center）
+        像素单位数值
+        百分比 -->
+    <style>
+        img {
+            width: 200px;
+            border: 1px solid #000;
+            transition: all 1s;
+
+            transform-origin: right bottom;
+        }
+
+        img:hover {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/rotate.png" alt="">
+</body>
+</html>

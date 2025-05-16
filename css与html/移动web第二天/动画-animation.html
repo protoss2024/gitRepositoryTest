@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画-animation（体验）</title>
+    <!-- 过渡:实现两个状态间的变化过程
+    动画:实现多个状态间的变化过程，动画过程可控（重复播放、最终画面、是否暂停） -->
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+
+            animation: change 1s infinite alternate;
+        }
+
+        @keyframes change {
+            0% {
+                transform:translate(0);
+            }
+
+            100% {
+                transform: translate(600px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

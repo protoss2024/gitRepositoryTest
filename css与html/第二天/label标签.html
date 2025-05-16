@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>label标签</title>
+</head>
+<body>
+    <!-- 一般情况 -->
+    <input type="radio">男
+    <br><br>
+    <!-- 作用是某个标签的说明文本 -->
+    <!-- 经验：用label标签绑定文字和表单控件的关系，增大表单控件的点击范围 -->
+    <!-- label标签增大点击范围有两种写法 -->
+    <!-- 写法1：label标签只包裹内容，不包裹表单控件，设置label标签的for属性值和表单控件的id属性值相同 -->
+    <input type="radio" id="man" name="gender">
+    <label for="man">男</label>
+    <input type="radio" id="girl" name="gender">
+    <label for="girl">女</label>
+    <br><br>
+    <!-- 写法2：使用label标签包裹文字和表单控件，不需要属性 -->
+    <!-- 注意书写的时候要把for属性删除 -->
+    <!-- 注意第二种js无法获取到id属性 -->
+    <label>
+        <input type="radio" name="gend">男
+    </label>
+    <label>
+        <input type="radio" name="gend">女
+    </label>
+    <!-- 注意label标签不仅能用在单选框，还能用在文本框，密码框，上传文件，单选框，多选框，下拉菜单，文本域等等 -->
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>匿名函数之函数表达式</title>
+</head>
+<body>
+    <!-- 匿名函数
+    没有名字的函数，无法直接使用
+    使用方式:
+        函数表达式
+            将匿名函数赋值给一个变量，并且通过变量名称进行调用，我们将这个称为函数表达式
+            其实函数的形参和实参使用跟具名函数一致
+        立即执行函数
+            使用场景介绍:避免全局变量之间的污染
+            语法:
+                方式1：
+                (function () { console.log(11) })();
+                方式2：
+                (function () { console.log(11)} () )
+
+                注意连续写立即执行函数必须要加小括号 -->
+
+    <script>
+        (function () {
+            let num =1
+            alert(num)
+        })()
+    </script>
+</body>
+</html>

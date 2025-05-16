@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>优先级-权重叠加2</title>
+    <style>
+        /* 各个选择器类型个数 */
+        /* 格式为（行内样式，id选择器个数，类选择器个数，标签选择器个数） */
+       /* (0,0,0,2) */
+        div p {
+        color: red;
+       }
+       /* 这个没有直接找到p，是继承的div的因此权重最低 */
+       .father {
+        color: blue;
+       }
+    </style>
+</head>
+<body>
+   <div class="father">
+        <p class="son">
+            文字
+        </p>
+   </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构赋值</title>
+</head>
+<body>
+    <!-- 数组解构和对象解构 -->
+    <!-- 解构赋值:
+        const arr = [100,60,80]
+        console.log(arr[0])
+        console.log(arr[1])
+        console.log(arr[2])
+        //解构为
+        const arr = [100,60,80]
+        const max = arr[0]
+        const min = arr[1]
+        const avg = arr[2]
+        console.log(max)
+        console.log(min)
+        console.log(avg)
+        //解构赋值写法更加简洁
+        const [max,min,avg] = [100,60,80]
+        console.log(max)
+        console.log(min)
+        console.log(avg) -->
+
+    <!-- 解构赋值是一种快速为变量赋值的简介语法，本质上任然是变量赋值 -->
+
+    <!-- 数组解构:
+    数组结构是将数组的单元快速批量赋值给一些列变量的简洁语法。
+    基本语法:
+    1.赋值运算符=左侧的[]用于批量声明变量，右侧数组的单元值江北赋值给左侧的变量
+    2.变量的顺序对应数组单元值的位置进行赋值操作
+        const arr = [1,2,3]
+        const [a,b,c] = arr
+        console.log(a)
+        console.log(b)
+        console.log(c)
+    基本语法:典型应用交换两个变量(注意分号必须加)
+        let a = 1
+        let b = 3;
+        [b,a] = [a,b]
+        console.log(a)
+        console.log(b)
+    注意:js前面必须加分号情况
+        1.立即执行函数
+        2.数组解构 -->
+
+    <!-- 细节:
+    1.变量多，单元值少的情况
+        如:const [a,b,c,d] = [1,2,3]
+    多出来的变量值为undefined
+    2.变量少，单元值多的情况
+        如:const [a,b] = [1,2,3]
+        利用剩余参数解决变量少，单元值多的情况
+            如:const [a,b,...c] = [1,2,3]
+    3.防止有undefined传递单元值的情况，可以设置默认值:
+        如:const [a=0,b=0,c=0,d=0] = [1,2,3]
+    4.按需导入，忽略某些返回值
+        如:const [a,b,,d] = [1,2,3,4] //3被忽略
+    5.支持多维数组的解构 -->
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空间转换-视距</title>
+    <!-- 作用:指定了观察者与z=0平面的距离，为元素添加透视效果 -->
+    <!-- 透视效果:近大远小，近实远虚 -->
+    <!-- 属性(添加给父级，取值范围800-1200(经验得出的值而不是只能这个值)):
+    perspective:视距; -->
+    <style>
+        .father {
+            /* 添加视距效果才能使z轴移动产生视觉效果 */
+            perspective: 1000px;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            transition: all 1s;
+        }
+
+        .son:hover {
+            transform: translateZ(300px);
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

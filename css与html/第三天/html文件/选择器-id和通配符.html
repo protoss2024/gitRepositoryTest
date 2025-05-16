@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器-id和通配符</title>
+    <style>
+        #red {
+            color: aqua;
+        }
+        * {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- id选择器作用是查找标签，差异化设置标签的显示效果。 -->
+    <!-- 场景：id选择器一般使用javascript使用，很少用来设置css样式 -->
+    <!-- 步骤：定义id选择器 ->#id名 -->
+    <!-- 使用id选择器 ->标签添加id=“id名” -->
+    <div>这是div标签</div>
+    <!-- id选择器只要是JavaScript使用，主要规则是同一个id选择器在一个页面只能使用一次 -->
+    <div id="red">这是div标签</div>
+    <div>这是div标签</div>
+    <!-- 通配符选择器作用是查找页面所有标签，设置相同样式。 -->
+    <!-- 通配符选择器：*，不需要调用吗浏览器自动查找页面所有标签，设置相同的样式 -->
+    <!-- 一般工作中，网页制作初期会使用通配符选择器，取出标签默认样式 -->
+    <p>这是p标签</p>
+    <h1>这是h1标签</h1>
+</body>
+</html>

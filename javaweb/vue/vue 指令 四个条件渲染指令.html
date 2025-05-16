@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue条件渲染指令</title>
+</head>
+<body>
+    <div id="app">
+    <!-- vue2 -->
+    v-if:
+        年龄<input type="text" v-model="age">,经判定为:
+        <span v-if="age <= 35">年轻人</span>
+        <span v-else-if="age > 35 && age < 60">年轻人</span>
+        <span v-else>年轻人</span>
+    v-show:
+        年龄<input type="text" v-model="age">，经判定为:
+        <span v-show="age <= 35">年轻人</span>
+    </div>
+    v-for:
+        <div v-for="addr in addrs">{{addr}}</div>
+        <div v-for="(addr,index) in addrs">{{index+1}}{{addr}}</div>
+    </div>
+</body>
+</html>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            age:20,
+            addr:['北京','上海','广州','深圳','成都','杭州']
+        },
+        methods:{
+
+        }
+    })
+</script>

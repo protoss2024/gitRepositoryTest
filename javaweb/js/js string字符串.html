@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 字符串</title>
+</head>
+<body>
+    <!-- 字符串创建方式有两种:
+    方法1:
+        var 变量名 = new String("……");
+        var str = new String("Hello String");
+    方法2:
+        var 变量名 = "……";
+        var str = "Hello String";
+        var str = 'Hello String'
+
+    常见属性:length    字符串的长度
+    方法:
+        charAt()        返回在指定位置的字符
+        indexOf()       检索字符串
+        trim()          去除字符串两边的空格
+        substring()     提取字符串中两个指定的索引号之间的字符 -->
+    <script>
+        var str = " Hello String    ";
+        console.log(str);
+
+        console.log(str.length);
+
+        console.log(str.charAt(3));
+        console.log(str.charAt(4));
+
+        console.log(str.indexOf("lo"));
+
+        var s = str.trim();
+        console.log(s)
+
+        // str.substring(start，end);start开始所有end结束索引，同样含头不含尾
+        console.log(s.substring(0,5))
+    </script>
+</body>
+</html>

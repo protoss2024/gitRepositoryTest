@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>线性渐变</title>
+    <!-- 渐变是多个颜色逐渐变化的效果，一般用于设置盒子背景 -->
+    <!-- 分类
+        线性渐变
+        径向渐变 -->
+
+    <!-- 线性渐变
+    属性（位置可以省略，最后一个位置不需要逗号）
+        background-image: linear-gradient(
+            渐变方向，
+            颜色1 终点位置，
+            颜色2 终点位置，
+            ……
+        ) -->
+    <!-- 取值
+        渐变方向：可选
+            to 方位名词
+            角度度数
+        终点位置:可选
+            百分比 -->
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            /* 不设置方向默认从上到下 */
+            background-image: linear-gradient(
+                red,
+                green
+            );
+            background-image: linear-gradient(
+                to right,
+                red,
+                green
+            );
+            background-image: linear-gradient(
+                30deg,
+                red,
+                green
+            );
+            background-image: linear-gradient(
+                red 80%,
+                green
+            );
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

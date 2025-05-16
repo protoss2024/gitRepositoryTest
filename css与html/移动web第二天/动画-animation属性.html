@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画-animation</title>
+    <!-- animation: 动画名称 动画时长 速度曲线 延迟时间 重复次数 动画方向 执行完毕时状态
+    提示：
+        1.动画名称和动画时长必须赋值
+        2.取值不分先后顺序
+        3.如果有两个时间值，第一个时间表示动画时长，第二个时间表示延迟时间 -->
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            animation: change 1s;
+            /* 速度曲线是指减速还是加速还是匀速 */
+            /* linear匀速 */
+            /* 加减速和匀速一般不常用 */
+            animation: change 1s linear;
+            /* steps分步动画（使用场景：配合精灵图实现精灵动画） */
+            animation: change 1s steps(10);
+            /* 第二个时间为延迟时间，指页面刷新后会等待一会 */
+            animation: change 1s 2s;
+            /* 没有单位的数字就是重复播放的次数 */
+            animation: change 1s 3;
+            /* 如果一直播放，重复次数为infinite */
+            animation: change 1s infinite;
+            /* 动画方向alternate：反向 */
+            animation: change 1s infinite alternate;
+            /* 动画执行完毕时的状态，forwards：动画结束末尾的状态 */
+            animation: change 1s forwards;
+        }
+
+        /* 宽度从200变化到800 */
+        @keyframes change {
+            from {
+                width: 200px;
+            }
+            to {
+                width: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

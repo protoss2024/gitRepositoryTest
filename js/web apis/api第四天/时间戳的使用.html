@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间戳的使用</title>
+</head>
+<body>
+    <!-- 如果计算倒计时效果，前面方法无法直接计算，需要借助于时间戳完成
+    什么是时间戳:
+        是指1970年1月1日00分00秒至现在的毫秒数，它是一种特殊的计量时间的方式
+    算法:
+        将来的时间戳-现在的时间戳 = 剩余时间毫秒数
+        剩余时间毫秒数 转换为 剩余时间的年月日时分秒就是倒计时时间
+        比如将来时间戳2000ms-现在时间戳1000ms = 1000ms
+        1000ms 转换为就是 0小时0分1秒 -->
+
+    <!-- 三种方式获取时间戳:
+        使用getTime()方法
+            const date = new Date()
+            date.getTime()
+        简写 +new Date()
+            +new Date()
+        使用Date.now()
+            Date.now() -->
+
+    <!-- 转换:
+        d=parseInt(总秒数/60/60/24);
+        h=parseInt(总秒数/60/60%24);
+        m=parseInt(总秒数/60%60);
+        s=parseInt(总秒数%60); -->
+</body>
+</html>

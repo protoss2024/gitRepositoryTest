@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象解构</title>
+</head>
+
+<body>
+    <!-- 对象解构是将对象属性和方法快速批量赋值给一系列变量的简介语法
+    基本语法:
+    1.赋值运算符 = 左侧的{}用于批量声明对象，右侧对象的属性值江北赋值给左侧的变量
+    2.对象属性的值将被赋值给与属性名相同的变量
+    3.注意解构的变量名不要和外面的变量名冲突否则报错
+    4.对象中找不到与变量名一致的属性时变量值为undefined -->
+    <script>
+        const obj = {
+            uname: 'pink',
+            age: 18
+        }
+
+        const { uname, age } = obj
+        console.log(uname)
+        console.log(age)
+        // 等价于:const uname = obj.uname
+        // 变量可以改名
+        const {uname: username, age:userage } = obj
+        console.log(username)
+        console.log(userage)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6箭头函数的作用</title>
+</head>
+<body>
+    <!-- 目的:引入箭头函数的目的是更简短的函数写法并且不绑定this，箭头函数的语法比表达式更简洁
+    使用场景:箭头函数更适合用于那些本来需要匿名函数的地方
+
+    学习路径:
+        1.基本语法
+        2.箭头函数参数
+        3.箭头函数this -->
+
+    <!-- 语法：
+        //原本语法
+        const fun = function () {
+            console.log('我是普通函数')
+        }
+        fun()
+        //箭头函数
+        const fun = () => {
+            console.log('我是箭头函数')
+        }
+        fun()
+
+        const fun = (x) => {
+            console.log('x')
+        }
+        fun(1)
+
+        //只有一个参数小括号可以省略
+        const fun = x => {
+            console.log('x')
+        }
+        fun(1)
+
+        //只有一行代码可以省略大括号
+        const fun = x => console.log('x')
+        fun(1)
+
+        //如果只有一行return那么return也可以省略
+        const fun = x => x + x
+        fun(1)
+
+        //加括号的函数体返回对象字面量表达式(对象)
+        //因为大括号包大括号会混所以外面的大括号变成了小括号
+        const fn1 = uname => ({ uname : uname})
+        console.log(fn1('pink')) -->
+
+        <!-- 箭头函数参数:
+            1.普通函数有arguments动态参数
+            2.箭头函数没有arguments动态参数，但是有剩余参数...args -->
+
+        <!-- 箭头函数this
+            在箭头函数出现之前，每一个新函数根据他是被如何调用的来定义这个函数的this值，非常令人讨厌
+            箭头函数不会创建自己的this，他只会从自己的作用域链的上一层沿用this
+            在开发中在箭头函数使用前要考虑函数中this的值，事件回调函数使用箭头函数时，this为全局的window，因此DOM事件回调函数为了简便，还是不太推荐使用箭头函数 -->
+
+</body>
+</html>

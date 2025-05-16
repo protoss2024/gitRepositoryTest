@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器</title>
+    <!-- 作用：创建虚拟元素（伪元素），用来摆放装饰性的内容 -->
+    <!-- 注意！这里是双冒号，虽然单冒号也生效 -->
+    <!-- 写法：
+    选择器                  说明
+    E::before           在E元素里面最前面添加一个伪元素
+    E::after            在E元素里面最后面添加一个伪元素 -->
+    <!-- 注意点：
+    1.必须设置content:" "属性，用来设置伪元素的内容，如果没有内容，则引号留空即可
+    2.伪元素默认是行内显示模式
+    3.权重和标签选择器相同 -->
+
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+        div::before {
+            display: block;
+            /* content属性必须要有 */
+            content: "老鼠";
+            /* 以下属性应为是行内属性所有没有生效 */
+            width: 100px;
+            height: 100px;
+
+            background-color: brown;
+            /* 换成block模式，上面的w和h属性生效 */
+            display: block;
+        }
+        div::after {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: inline-block;
+            /* content属性必须要有 */
+            content: "大米";
+        }
+    </style>
+</head>
+<body>
+    <!-- 标签内容：老鼠爱大米 -->
+    <div>爱</div>
+    <hr>
+    <div>你好</div>
+</body>
+</html>

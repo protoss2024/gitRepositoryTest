@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 视口标签 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分辨率与视口与二倍图使用方法</title>
+</head>
+<body>
+    <!-- 屏幕分辨率:
+        屏幕分辨率:从横向上的像素点点数，单位是px
+        PC分辨率:
+            1920*1080
+            1366*768
+            ……
+        缩放 150%:
+            1920/150%
+            1080/150%
+        总结:
+            硬件分辨率->物理分辨率(出厂设置)
+            缩放调节的分辨->逻辑分辨率(软件、驱动设置) -->
+        <!-- PC端网页代码参考的逻辑分辨率 -->
+        <!-- 移动端参考的也是逻辑分辨率 -->
+
+        <!-- 视口
+            手机屏幕尺寸不同，网页宽度均为100%
+            网页和宽度的逻辑分辨率尺寸相同
+            视口:显示HTML网页的区域，用来约数HTML尺寸
+            <head>
+                ……
+                …… -->
+                <!-- 视口标签 -->
+                <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            </head>
+            width=device-width:视口宽度=设备宽度
+            initial-scale=1.0:缩放1倍(不缩放) -->
+
+    <!-- 二倍图
+        概念:设计稿里面每个元素的尺寸的倍数
+        作用:防止图片在高分辨率屏幕下模糊失真
+            现阶段设计稿参考iphone6/7/8,设备宽度375px产出设计稿
+            二倍图设计稿尺寸:750px -->
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js array数组对象</title>
+</head>
+<body>
+    <!-- js中array对象用于定义数组
+    定义
+    方式1:
+        var 变量名 = new Array(元素列表);
+        var arr = new Array(1,2,3,4);
+    方式2:
+        var 变量名 = [元素列表];
+        var arr = [1,2,3,4]
+    访问:
+        arr[索引] = 值;
+        arr[10] = "hello" -->
+    <!-- <script>
+        var arr = new Array(1,2,3,4)
+        console.log(arr[0])
+        console.log(arr[1])
+        console.log(arr[2])
+        console.log(arr[3])
+
+        // 特点:长度可变 类型可变
+        arr[10] = 50;//在js中不会报错，因为是变长度的
+        console.log(arr[9])
+        console.log(arr[10])
+        // 如果中间有没赋值的会赋予undefined
+    </script> -->
+    <!-- Array常用属性
+        length：设置或返回数组中元素的数量
+    方法:
+        forEach()：遍历数组每个有值（只遍历有值的，如果是undefined会直接跳过）的元素，并调用一次传入的函数
+        push()：将新元素添加到数组的末尾，并返回新的长度
+        splice()：从数组中删除元素两个参数，第一个是索引，第二个是几个，即索引几删除后面几个 -->
+
+    <!-- ES6 箭头函数:(……) => (……)------简化函数定义 -->
+    <!-- arr.forEach(e) => {
+        console.log(e);
+    } -->
+</body>
+</html>

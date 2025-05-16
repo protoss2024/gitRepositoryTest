@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角和盒子阴影</title>
+    <!-- 盒子模型-圆角
+    作用：设置元素的外边框为圆角
+    属性名：border-radius
+    属性值：数字+px/百分比 -->
+    <!-- 提示:属性值是圆角半径 -->
+    <!-- 一般都是数字+px -->
+
+    <!-- 盒子模型-阴影（拓展）
+    作用：给元素设置阴影效果
+    属性名：box-shawdow
+    属性值：X轴偏移量 Y轴偏移量 模糊半径 扩散半径 颜色 内外阴影 -->
+    <!-- 注意：
+    前两项必须书写
+    默认为外阴影，内阴影需要添加inset -->
+    <style>
+        div {
+            margin: 50px auto;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+
+            /* 数字+px */
+            /* border-radius: 30px; */
+
+            /* 多值写法 */
+            /* 记忆方法：左上角顺时针赋值，如果没有取值的角则与对角取值相同 */
+            /* border-radius: 10px 20px 40px 80px; */
+            /* 三值 */
+            /* border-radius: 10px 40px 80px; */
+            /* 两值写法 */
+            /* border-radius: 10px 80px; */
+
+            /* 常见应用-正圆形状
+            给正方形盒子设置圆角属性值为宽高的一半、50%
+            常用形状-胶囊形状
+            给长方形盒子设置圆角属性值为盒子高度的一半 */
+
+            /* 盒子模型-阴影代码学习 */
+            box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

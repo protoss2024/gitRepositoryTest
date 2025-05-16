@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>img标签练习</h1>
+    <!-- <img src="">图像单标签 -->
+    <!-- ./在img中有提示，且多个img自身不换行 -->
+     <!-- src的值为图片的url -->
+    <hr>
+    <img src="./codeTring.png">
+    <img src="./codeTring.png">
+    <!-- img属性还有alt，title，width和height -->
+    <!-- alt是替换文本，即图无法显示时显示的文字
+    title是提示文本，鼠标悬停在图上时显示的文字
+    width是图片的宽度，值是数字没有单位
+    height是图片的高度，值是数字没有单位 -->
+    <!-- width和height是缩放图片符合比例而不是截取到符合比例 -->
+    <!-- 如果width和height只有一个，则是等比例缩放图片 -->
+    <!-- alt是解决以前的问题，即网速差的问题，可能造成图片加载不出来，一般用于提示这个地方有张图，解决这个问题 -->
+    <!-- 主要用前两个，后两个一般有css实现 -->
+    <img src="./codeTring.png" alt="试验alt" title="测试title" width="1000" height="1000">
+
+    <!-- /标识进入文件夹,即文件夹名字/ -->
+    <!-- .标识当前文件所在文件夹 -->
+    <!-- ./即进入当前文件夹 -->
+    <!-- ..标识上一级文件夹，即进入上一级文件夹为../ -->
+    <!-- 上两级则为.../，以此类推 -->
+    <img src="../codeTring.png" alt="1">
+    <img src="./codeTring.png" alt="2">
+    <img src="./tes/codeTring.png" alt="3">
+    <img src="./tes/test/codeTring.png" alt="4">
+    <!-- /和\都是进入文件夹，仅限windows，一般书写一律将\改为/ -->
+
+    <img src="C:/Users/86131/Desktop/vscodeFile/present/tes/test/codeTring.png" alt="5">
+    <!-- 从别的网页复制图片链接地址也是绝对地址 -->
+    <!-- 应用方式为友情链接 -->
+    <img src="https://www.itheima.com/images/logo.png" alt="">
+    
+</body>
+</html>

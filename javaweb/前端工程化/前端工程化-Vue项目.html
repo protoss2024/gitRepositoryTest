@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前端工程化-Vue项目</title>
+</head>
+<body>
+    <!-- Vue项目-创建 -->
+    <!-- 命令行:vue create vue-project01
+    图形化界面:vue ui -->
+
+    <!-- Vue项目-目录结构
+        基于Vue脚手架创建出来的工程，有标准的目录结构，如下:
+    项目名
+        > node_modules        整个项目的依赖包
+        > public              存放项目的静态文件
+        > src                 存放项目的源代码
+            > assets            静态资源
+            > components        可重用的组件
+            > router            路由配置
+            > views             视图组件(页面)
+            App.Vue             入口页面(根组件)
+            main.js             入口js文件
+        .gitignore
+        babel.config.js
+        jsconfig.json
+        package-lock.json
+        package.json          模块基本信息，项目开发所需要模块，版本信息
+        README.md
+        vue.config.js         保存vue配置的文件，如:代理、端口的配置等 -->
+
+        <!-- Vue项目-启动
+        方式1：Vscode中使用npm脚本图形化界面启动
+        方式2：命令行使用npm run serve -->
+        <!-- 可以热部署 -->
+
+        <!-- Vue项目-配置端口（添加span标签标注的地方）
+        const { defineConfig } = require('@vue/cli-service')
+module.exports = defineConfig({
+  transpileDependencies: true
+
+
+    <span>
+        devServer:{
+            port:7000
+        }
+    </span>
+
+
+}) -->
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型-组成</title>
+    <!-- 作用：布局网页，摆放盒子和内容 -->
+    <!-- 盒子模型重要组成部分：
+    1.内容区域 - width & height
+    2.内边距 - padding（出现在内容与盒子边缘之间）
+    3.边框线 - border
+    4.外边距 - margin（出现在盒子外面） -->
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+
+            /* padding让内容与边有距离，而且盒子变大了，padding特点就是会往盒子边缘扩大对应像素，撑大盒子 */
+            padding: 20px;
+            /* 在盒子边缘产生边框线 */
+            /* 1px是粗细，solid是实线，blue是颜色 */
+            /* 边框线也会占据空间，且是向外占用空间 */
+            border: 1px solid blue;
+            /* 会往盒子四个方向空出对应像素的空白 */
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>div 标签</div>
+</body>
+</html>

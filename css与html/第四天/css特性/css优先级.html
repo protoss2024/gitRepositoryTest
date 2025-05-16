@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css优先级</title>
+    <style>
+        /* 按照优先级顺序倒写，避免后者覆盖前者造成的覆盖 */
+        /* !important 提权功能，提高权重/优先级别 最高，但是慎用！ */
+        /* 在实际开发中我们不能保证该属性需要永远最高，因此慎用！ */
+        * {
+            color: rgb(16, 3, 3) !important;
+        }
+        #test {
+            color: yellow;
+        }
+        .box {
+            color: green;
+        }
+        div {
+            color: blue;
+        }
+        * {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div style="color:pink" class="box" id="test">div 标签</div>
+</body>
+</html>

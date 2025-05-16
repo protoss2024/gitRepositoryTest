@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂直对齐方式 vertical-align</title>
+    <!-- 浏览器对行内和行内块会当做字处理就会当场字处理 -->
+    <!-- 属性名：vertical-align
+    属性值
+    属性值          效果
+    baseline       基线对齐（默认）
+    top            顶部对齐
+    middle         居中对齐
+    bottom         底部对齐 -->
+    <style>
+        /* vertical-align一般加给最高的元素 */
+        /* 顶对齐：最高内容的顶部 */
+        /* 底对齐：最高内容的底部 */
+        /* 只要不是基线，图片底下就没有空白 */
+        /* 还有一种让图片底下没有空白的方法就是显示模式变为块 */
+        /* 原因是变为块了浏览器就不能把图片当场文字处理 */
+        div {
+            border: 1px solid #000;
+        }
+        
+        img {
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./images/1.webp" alt="">
+        我是谁？我在哪？
+    </div>
+</body>
+</html>

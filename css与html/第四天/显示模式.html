@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>显示模式</title>
+    <style>
+        /* 显示模式：标签（元素）的显示方式 */
+        /* 作用：布局网页的时候，根据标签的显示模式选择合适的标签拜访内容 */
+        /* 常见的显示模式有三大类：
+        块级元素：1.独占一行。2.宽度默认是父级的100%。3.添加宽高属性生效。
+        行内元素：1.一行共存多个。2.尺寸由内容撑开。3.添加宽高属性不会生效
+        行内块元素：1.一行共存多个。2.尺寸由内容撑开。3.添加宽高属性会生效。且像是图片会等会比例缩放 */
+        /* 块元素 */
+        div {
+            /* 宽高属性生效 */
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+
+            /* 显示模式转换 */
+            display: inline;
+        }
+        .div1 {
+            background-color: blue;
+        }
+
+        /* 行内元素 */
+        span {
+            /* 行内元素的width和height不会生效 */
+            width: 200px;
+            height: 200px;
+            background-color: red;
+
+        }
+        .span1 {
+            background-color: yellow;
+        }
+
+        /* 行内块元素 */
+        img {
+            /* 行内块属性width和height会生效 */
+            width: 100px;
+            height: 100px;
+        }
+
+
+        /* 转换显示模式 */
+        /* 属性名：display
+        属性值有三种属性值
+        属性值        效果
+        block         块级
+        lnline-block  行内块
+        inline        行内 */
+        /* 在工作中常用的是block和lnline-block，inline不太常用 */
+        
+    </style>
+</head>
+<body>
+    <!-- 块元素 -->
+    <div>div标签1</div>
+    <div class="div1">div标签2</div>
+
+    <!-- 行内元素 -->
+    <span>span标签1</span>
+    <span class="span1">span标签2</span>
+
+    <!-- 行内块元素 -->
+    <img src="./images/1.png" alt="">
+    <img src="./images/1.png" alt="">
+</body>
+</html>

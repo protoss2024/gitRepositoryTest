@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双开门</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 1.布局：父子级结构，父级大图，子级是作用小兔 */
+        .father {
+            overflow: hidden;
+            display: flex;
+            margin: 0 auto;
+            width: 1366px;
+            height: 600px;
+            background-image: url(./images/bg.jpg);
+        }
+
+        .father .left,
+        .father .right {
+            width: 50%;
+            height: 600px;
+            background-image: url(./images/fm.jpg);
+
+            transition: all 1s;
+        }
+
+        .father .right {
+            /* right属性值表示取到精灵图右边的部分 */
+            background-position: right 0;
+        }
+
+        /* 2.鼠标悬停效果，左右移动 */
+        .father:hover .left {
+            transform: translateX(-100%);
+        }
+
+        .father:hover .right {
+            transform: translateX(100%);
+        } 
+
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

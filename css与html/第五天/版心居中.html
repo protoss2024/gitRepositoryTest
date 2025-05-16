@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>版心居中</title>
+    <!-- 盒子模型-外边距
+    属性名：margin
+    提示：与padding属性值写法、含义相同 -->
+    <!-- margin多值写法与padding写法与含义完全一致 -->
+    <style>
+        div {
+            width: 1000px;
+            height: 200px;
+            background-color: pink;
+            
+            /* <!-- margin外边距不会撑大盒子 --> */
+            /* margin: 50px; */
+
+            /* 单边设置，与padding一样 */
+            /* margin-left: 100px; */
+
+            /* 多值写法 */
+            /* margin: 50px 100px; */
+
+            /* 版心居中（左右居中） */
+            /* 浏览器执行该语句，浏览器会知道自己的宽度减掉盒子的宽除2，就能卡到浏览器的中心 */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div>版心内容</div>
+</body>
+</html>

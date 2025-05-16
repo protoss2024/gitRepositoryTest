@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外边距问题-合并与塌陷</title>
+    <!-- 外边距问题-合并现象
+    场景：垂直排列的兄弟元素，上下margin会合并
+    现象：取两个margin中的较大值生效 -->
+
+    <!-- 外边距问题-塌陷问题
+    场景：父子级的标签，子级的添加上外边距会产生塌陷问题
+    现象：导致父级一起向下移动 -->
+    <style>
+        /* 这两个选择器的margin发生合并，取大的 */
+            .one {
+                width: 100px;
+                height: 100px;
+                background-color: brown;
+
+                margin-bottom: 20px;
+            }
+
+            .two {
+                width: 100px;
+                height: 100px;
+                background-color: orange;
+
+                margin-top: 10px;
+            }
+
+            /* 发生塌陷现象，父级被塌陷 */
+            /* 解决方案：
+            1.取消子级margin，父级设置padding（推荐）
+            2.父级设置overflow:hidden
+            3.父极设置border-top */
+            /* .father {
+                width: 300px;
+                height: 300px;
+                background-color: pink;
+            }
+
+            .son {
+                margin-top: 50px;
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+            } */
+
+            /* 第一种解决方案 */
+            /* .father {
+                width: 300px;
+                height: 300px;
+                background-color: pink;
+                padding-top: 50px;
+                box-sizing: border-box;
+            }
+
+            .son {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+            } */
+
+            /* 第二种解决方案 */
+            /* 浏览器会找father范围，溢出部分隐藏，然后浏览器发现没有间距，浏览器意识到正确的边缘 */
+             /* .father {
+                width: 300px;
+                height: 300px;
+                background-color: pink;
+                overflow: hidden;
+            }
+
+            .son {
+                margin-top: 50px;
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+            } */
+
+            /* 第三种解决方案 */
+            /* 能解决的原因跟第二种相同 */
+            .father {
+                width: 300px;
+                height: 300px;
+                background-color: pink;
+                border-top: 1px solid #000;
+            }
+
+            .son {
+                margin-top: 50px;
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+            }
+            
+    </style>
+</head>
+<body>
+    <div class="one">one</div>
+    <div class="two">two</div>
+
+    <div class="father">
+        <div class="son">son</div>
+    </div>
+</body>
+</html>

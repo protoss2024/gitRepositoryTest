@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 音频标签为<audio src=""></audio>，src为必须标签，支持格式MP3,Ogg和Wav -->
+    <!-- control，loop，autoplay三个属性也是常用属性
+    controls为显示音频控制面板
+    loop为循环播放
+    autoplay为自动播放 为了用户体验一般都会禁用自动播放 -->
+    <!-- 在html5中，如果属性名和属性值完全一样可以简写为一个单词 -->
+    <!-- controls完整形式为controls="controls" -->
+    <!-- autoplay为自动播放,浏览器一般会直接把自动播放禁用所以在html代码中autoplay没有用处 -->
+    <audio src="./media/music.mp3" controls loop autoplay></audio>
+    <!-- 视频标签为<video src=""></video>同样src也是必须标签 -->
+    <!-- 另外还有controls，loop，muted和autoplay标签 -->
+    <!-- 除了mute其他与音频相同 -->
+    <!-- 注意如果要autoplay生效要mute禁音 -->
+    <video src="./media/vue.mp4" controls loop muted autoplay></video>
+    <video src="./media/vue.mp4" controls loop autoplay></video>
+</body>
+</html>

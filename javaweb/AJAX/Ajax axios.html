@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax axios</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <!-- Axios:
+        介绍:Axios对原生的Ajax进行了封装，简化书写，快速开发。
+        官网:https://www.axios-http.cn/
+    
+    Axios入门:
+        1.引入Axios的js文件
+        <script src="js/axios-0.18.0.js"></script>
+        2.使用Axios发送请求,并获取相应结果
+        axios({
+            methods:"get",
+            url:"http://yapi.smart-xwork.cn/mock/169327/emp/list"
+        }).then((result) => {       //成功回调函数
+            console.log(result.data);
+        });
+
+        axios({
+            method:"post",
+            url:"http://yapi/.smart-xwork.cn/mock/169327/emp/deleteById",
+            data:"id=1"
+        }).then((result) => {      //成功回调函数
+            console.log(result.data);
+        }); -->
+
+        <!-- Axios:
+        请求方式别名
+            axios.get(url[,config])
+            axios.delete(url[,config])
+            axios.post(url[,data[,config]])
+            axios.put(url[,data[,config]]) -->
+
+
+        <input type="button" value="获取数据GET" onclick="get()">
+        <input type="button" value="删除数据POST" onclick="post()">
+</body>
+<script>
+    function get(){
+        // 通过axios发送异步请求-get
+        // axios({
+        //     methods:"get",
+        //     url:"http://yapi.smart-xwork.cn/mock/169327/emp/list",
+        // }).then(result =>{
+        //     console.log(result.data);
+        // })
+
+        // 推荐方式
+        axios.get("http://yapi.smart-xwork.cn/mock/169327/emp/list").then(result=>{
+            console.log(result.data);
+        })
+    }
+
+    function post(){
+        // 通过axios发送异步请求-post
+        // axios({
+        //     methods:"post",
+        //     url:"http://yapi/.smart-xwork.cn/mock/169327/emp/deleteById",
+        //     data:"id=1"
+        // }).then(result =>{
+        //     console.log(result.data);
+        // })
+        // 推荐方式
+        axios.post("http://yapi/.smart-xwork.cn/mock/169327/emp/deleteById","id=1").then(result=>{
+            console.log(result.data);
+        })
+    }
+</script>
+</html>

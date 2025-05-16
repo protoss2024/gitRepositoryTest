@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器</title>
+    <!-- 定义：由两个或多个基础选择器，通过不同的方式组合而成 -->
+    <!-- 作用：更准确，更高效的选择目标元素（标签） -->
+    
+    <style>
+        /* 后代选择器：选中某元素的后代元素 -->
+        <!-- 写法：父选择器 子选择器（css属性），父子选择器之间用空格隔开 -->
+        <!-- 找到父级里的所有后代也就是不管是儿子还是孙子都生效 */
+
+        /* div span{
+            color: blue;
+        } */
+
+
+
+
+        /* 子代选择器：选中子代元素（最近的子级，孙子和之后的都不算 */
+        /* 写法：父选择器>子选择器{css属性}，父子选择器之间用>隔开 */
+        /* div>span{
+            color: blue;
+        } */
+
+        /* 并级选择器：选中多组标签设置相同的样式 */
+        /* 写法：选择器1，选择器2，...,选择器N{css属性}，选择器N{css属性}，选择器之间用，隔开 */
+        /* 写的时候建议并级选择器建议写一个就换行 */
+        /* div,
+        p,
+        span {
+            color: red;
+        } */
+
+        /* 交集选择器 -了解 */
+        /* 交集选择器：选中同时满足多个条件的元素 */
+        /* 写法：选择器1选择器2{css属性}，选择器之间连写，没有任何符号 */
+        /* 如果有标签，标签选择器要写在最前面 */
+        p.box {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <span>span 标签</span>
+    <div>
+        <span>这是div的大儿子</span>
+    </div>
+    <div>
+        <span class="box">这是div的二儿子</span>
+        <p>
+            <span>这是孙子</span>
+        </p>
+    </div>
+    <p>
+        你好
+    </p>
+    <p class="box">交集选择器</p>
+</body>
+</html>

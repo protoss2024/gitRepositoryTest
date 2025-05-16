@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        /* 伪类选择器：伪类表示元素状态，选中元素的某个状态设置样式（像是鼠标滑过） */
+        /* 写法：鼠标悬停状态：选择器：hover{css属性} */
+        /* image标签不能使用hover */
+        /* 注意：并集选择器每一个:hover只能给最近的那一个选择器或者标签赋予效果 */
+        /* a:hover {
+            color:red;
+        }
+        .box:hover {
+            color:blue;
+        } */
+
+        /* 伪类-超链接（拓展）
+        超链接一共有四个状态
+        选择器       作用
+        :link       访问前
+        :visited    访问后
+        :hover      鼠标悬停
+        :active     点击时（激活） */
+        /* 如果要给超链接设置以上四个状态，则需要按照LVHA（选择器首字母）的顺序书写 */
+        /* link是访问前，如果点击后就恢复原状且刷新无效 */
+        a:link {
+            color:yellow;
+        }
+        /* 点击后的状态 */
+        /* 谷歌浏览器没效果，貌似不接受，别的浏览器有效果 */
+        a:visited {
+            color: purple;
+        }
+        /* 鼠标悬停的时候 */
+        a:hover {
+            color:green;
+        }
+        /* 鼠标点击的时候 */
+        a:active {
+            color: black;
+        }
+        /* 工作中一般一个a标签选择器选择超链接样式,通常都会写hover */
+        /* a {
+            color: red;
+        }
+        a:hover {
+            color: chartreuse;
+        } */
+    </style>
+</head>
+<body>
+    <a href="#">伪类选择器测试a标签</a>
+    <div>伪类选择器测试div标签</div>
+
+</body>
+</html>

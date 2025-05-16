@@ -1,0 +1,102 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>综合案例二-banner效果</title>
+    <style>
+        .div1 {
+            height: 500px;
+            background-image: url("./21-综合案例二-banner效果/images/bk.png");
+            background-repeat: no-repeat;
+            background-color: #f3f3f4;
+            background-position: left bottom;
+            text-align: right;
+            color: #333;
+        }
+        .div2 {
+            line-height: 100px;
+            font-size: 36px;
+
+        }
+        .div3 {
+            font-size: 20px;
+        }
+        a {
+            display: block;
+            color: #fff;
+            width: 125px;
+            height: 40px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 40px;
+            background-color: #f06b1f;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <div class="div1">
+        <div class="div2">让创造产生价值</div>
+        <br>
+        <div class="div3">我们希望小游戏平台可以提供无线的可能性，让每一个创作者都可以将他们的才华和创意传递给用户。</div>
+        <a href="#">我要报名</a>
+    </div>
+</body>
+</html> -->
+
+<!-- 注释部分为自己写，以下为修改后的 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>综合案例二-banner效果</title>
+    <style>
+        .banner {
+            height: 500px;
+            background-color: #f3f3f4;
+            background-image: url("./21-综合案例二-banner效果/images/bk.png");
+            background-repeat: no-repeat;
+            background-position: left bottom;
+
+            /* 文字控制属性，直接继承 */
+            text-align: right;
+            color: #333;
+        }
+        .banner h2 {
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 100px;
+        }
+        .banner p {
+            font-size: 20px;
+        }
+        .banner a {
+            width: 125px;
+            height: 40px;
+            background-color: #f06b1f;
+
+            /* 不能用块，得用行内块，因为块独占一行（即text-align不对块级元素生效，但是对行内块级元素生效） */
+            /* 在实际工作中一般不要用标签选择器 */
+            text-align: center;
+            display: inline-block;
+            line-height: 40px;
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 布局大区域一般都用div -->
+    <div class="banner">
+        <h2>让创造产生价值</h2>
+        <p>我们希望小游戏平台可以提供无限的可能性，让每一个创作者都可以将他们的才华和创意传递给用户。</p>
+        <a href="#">我要报名</a>
+    </div>
+</body>
+</html>
