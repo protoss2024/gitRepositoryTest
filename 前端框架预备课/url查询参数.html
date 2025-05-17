@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>url查询参数</title>
+</head>
+
+<body>
+    <!-- 浏览器提供给服务器的额外信息，让服务器返回浏览器想要的数据
+    网址+?拼接字符串
+    例如:网址?pname=河北省
+    对个值用&连接 -->
+
+    <!-- axios给了params选项
+    在运行时axios会拼接 -->
+
+    <p class="myP"></p>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.2/axios.min.js"></script>
+    <script>
+        axios({
+            url: 'http://hmajax.itheima.net/api/city',
+            params:{
+                pname:'福建省'
+            }
+        }).then(result => {
+            console.log(result)
+            document.querySelector('.myP').innerHTML = result.data.list.join('<br>')
+        })
+    </script>
+</body >
+</html >
