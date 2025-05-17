@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLhttpRequest的使用</title>
+</head>
+
+<body>
+    <!-- 步骤:
+    1.创建XMLHttpRequest对象
+    2.配置请求方法和请求url地址
+    3.监听loadend事件，接收响应结果
+    4.发起请求
+    const xhr = new XMLHttpRequest()
+    xhr.open('请求方法','请求url地址')
+    xhr.addEventListener('loadend',() => {
+        console.log(xhr.response)
+    })
+    xhr.send() -->
+
+    <p></p>
+    <script>
+        const xhr = new XMLHttpRequest()
+        xhr.open('GET', 'http://hmajax.itheima.net/api/province')
+        xhr.addEventListener('loadend', () => {
+            console.log(xhr.response)
+            const data =JSON.parse(xhr.response)
+            console.log(data.list.join('<br>'))
+            document.querySelector('p').innerHTML = data.list.join('<br>')
+        })
+        xhr.send()
+    </script>
+</body>
+
+</html>
